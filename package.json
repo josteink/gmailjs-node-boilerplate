@@ -1,0 +1,19 @@
+{
+  "name": "gmailjs-node-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "deps": "npm install",
+    "build": "browserify -o dist/extension.js src/extension.js"
+  },
+  "author": "Jostein kjønigsen",
+  "license": "ISC",
+  "dependencies": {
+    "gmail-js": "^0.6.8",
+    "jquery": "^1.11.0"
+  },
+  "devDependencies": {
+    "browserify": "^13.3.0"
+  }
+}
