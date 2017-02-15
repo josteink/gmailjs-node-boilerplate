@@ -5,7 +5,9 @@
   "main": "",
   "scripts": {
     "deps": "npm install",
-    "build": "browserify -o dist/extension.js src/extension.js"
+    "stage": "mkdir dist || echo Dist already exists.",
+    "bundle": "browserify -o dist/extension.js src/extension.js",
+    "build": "npm run stage && npm run bundle"
   },
   "author": "Jostein kjønigsen",
   "license": "ISC",
