@@ -11,7 +11,7 @@ First get the code and build it:
 
 ````
 # get code
-git clone gmailjs-node-boilerplate
+git clone https://github.com/josteink/gmailjs-node-boilerplate/
 
 # get deps and build
 cd gmailjs-node-boilerplate
