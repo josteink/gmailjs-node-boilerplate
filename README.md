@@ -16,6 +16,8 @@ git clone https://github.com/josteink/gmailjs-node-boilerplate/
 # get deps and build
 cd gmailjs-node-boilerplate
 npm install
+# ensure you're running latest version!
+npm update
 npm run build
 ````
 
