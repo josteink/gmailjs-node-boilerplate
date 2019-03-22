@@ -10,4 +10,13 @@ window.gmail = gmail;
 gmail.observe.on("load", () => {
     const userEmail = gmail.get.user_email();
     console.log("Hello, " + userEmail + ". This is your extension talking!");
+
+    gmail.observe.on("view_email", (domEmail) => {
+        console.log("Looking at email:", domEmail);
+
+        const newId = gmail.new.get.email_id(domEmail.$el[0]);
+        const emailData = gmail.new.get.email_data(newId);
+
+        console.log("Email data:", emailData);
+    });
 });
