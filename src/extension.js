@@ -13,9 +13,7 @@ gmail.observe.on("load", () => {
 
     gmail.observe.on("view_email", (domEmail) => {
         console.log("Looking at email:", domEmail);
-
-        const emailId = gmail.new.get.email_id(domEmail);
-        const emailData = gmail.new.get.email_data(emailId);
+        const emailData = gmail.new.get.email_data(domEmail);
         console.log("Email data:", emailData);
     });
 });
