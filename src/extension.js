@@ -1,5 +1,16 @@
 "use strict";
 
+// loader-code: wait until gmailjs has finished loading, before triggering actual extensiode-code.
+const loaderId = setInterval(() => {
+    if (!window._gmailjs) {
+        return;
+    }
+
+    clearInterval(loaderId);
+    startExtension(window._gmailjs);
+}, 100);
+
+// actual extension-code
 function startExtension(gmail) {
     console.log("Extension loading...");
     window.gmail = gmail;
@@ -15,12 +26,3 @@ function startExtension(gmail) {
         });
     });
 }
-
-const loaderId = setInterval(() => {
-    if (!window._gmailjs) {
-        return;
-    }
-
-    clearInterval(loaderId);
-    startExtension(window._gmailjs);
-}, 100);
