@@ -6,7 +6,8 @@
   "scripts": {
     "deps": "npm install",
     "stage": "mkdir dist || echo Dist already exists.",
-    "bundle": "browserify -o dist/extension.js src/extension.js",
+    "bundle": "browserify -o dist/gmailJsLoader.js src/gmailJsLoader.js && browserify -o dist/extension.js src/extension.js",
+    "devbuild": "cp ../gmail.js/src/gmail.js node_modules/gmail-js/src/ && npm run build", 
     "build": "npm run stage && npm run bundle"
   },
   "author": "Jostein kjønigsen",
