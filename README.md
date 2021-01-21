@@ -1,6 +1,8 @@
 
 # GmailJS Node boilerplate
 
+![Node.js CI](https://github.com/josteink/gmailjs-node-boilerplate/workflows/Node.js%20CI/badge.svg)
+
 This repo contains sample code to get a WebExtensions-based
 browser-extension using
 the [gmail.js](https://github.com/KartikTalwar/gmail.js/) library.
