@@ -24,5 +24,9 @@ function startExtension(gmail) {
             const emailData = gmail.new.get.email_data(domEmail);
             console.log("Email data:", emailData);
         });
+
+        gmail.observe.on("compose", (domEmail) => {
+            console.log("New compose window is opened");            
+        });
     });
 }
