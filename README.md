@@ -43,3 +43,20 @@ variable.
 You can use this to get familiar with the API.
 
 Cheers!
+
+## Regarding WebExtension Manifest versions
+
+Gmail.JS and this boilerplate repo was originally developed when
+WebExtension [Manifest V2](https://developer.chrome.com/docs/extensions/mv2/manifest/) were
+in place.  Thanks to the help of **@tomer-regev** this boilerplate repo now
+uses [Manifest V3](https://developer.chrome.com/docs/extensions/mv3/intro/mv3-overview/)
+instead.
+
+If you for whatever reason still want to use the V2 code, check out the code
+back at [ManifestV2-tag](https://github.com/josteink/gmailjs-node-boilerplate/tree/ManifestV2), which has been maintained for historical reasons.
+
+Either way, Gmail.JS itself should work fine under both versions with
+no change required in your extension-code, unless your extension
+itself has code which needs to be migrated.
+
+For more advice about upgrades, see the [Chrome documentation](https://developer.chrome.com/docs/extensions/mv3/intro/mv3-migration/).
