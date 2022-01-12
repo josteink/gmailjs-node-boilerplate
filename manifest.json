@@ -23,9 +23,8 @@
             "dist/extension.js"
         ],
         "matches": ["<all_urls>"]
-      }],
-
-    "permissions": [
+    }],
+    "host_permissions": [
         "https://*/*"
     ]
 }
