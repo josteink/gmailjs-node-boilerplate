@@ -25,7 +25,7 @@ npm run build
 
 Now ensure the code loads and works:
 
-* Load the folder containing the extension (or `manifest.json`) in
+* Load the folder containing the extension (`manifest.json`) in
 your browser.
 * Load `mail.google.com` in your browser and open the developer console.
 
