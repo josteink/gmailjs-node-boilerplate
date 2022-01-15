@@ -34,7 +34,7 @@ You should be greeted by a message saying the following
     Hello, <you>. This is your extension talking!
 
 If that works, you should now be ready to customize the
-extension-code. Do this by editing `extension.js`.
+extension-code. Do this by editing `extension.js` and rerunning `npm run build`. 
 
 You can also interact with a instance of Gmail.js ready for use. `gmail`
 should already be exposed in the developer console as a global
