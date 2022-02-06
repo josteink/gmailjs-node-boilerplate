@@ -54,9 +54,9 @@ The aim for this project is not to have a ready-to-use production setup with loa
 
 Instead this project aims to demonstrate the absolutely simplest way possible one can embed Gmail.js in one's own extension, without introducing any other needless or complicating factors. Thus making it easier to adapt into your own projects and toolchains you already know well. 
 
-It's also meant as a simple way to test the gmail.js API and capabilities without having to setup any of your own first. 
+It's also meant as a simple way to test the gmail.js API and capabilities without having to setup anything of your own first. 
 
-Lastly it's also a simple playground where big-reports can easily be reproduced or verified. 
+Lastly it's also a simple playground where bug-reports can easily be reproduced or verified. 
 
 None of these goals aligns particularly well with having a pre-made, production-ready, size-optimized, security-hardened setup. And that's perfectly ok, especially for learning. 
 
