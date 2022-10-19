@@ -17,6 +17,6 @@
     "jquery": "^3.6.1"
   },
   "devDependencies": {
-    "esbuild": "^0.15.10"
+    "esbuild": "0.15.12"
   }
 }
