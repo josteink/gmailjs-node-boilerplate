@@ -13,8 +13,8 @@
   "author": "Jostein kjønigsen",
   "license": "ISC",
   "dependencies": {
-    "gmail-js": "^1.1.1",
-    "jquery": "^3.6.1"
+    "gmail-js": "^1.1.14",
+    "jquery": "^4.0.0-beta"
   },
   "devDependencies": {
     "esbuild": "^0.16.0"
