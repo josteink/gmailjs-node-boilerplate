@@ -8,7 +8,8 @@
     "stage": "mkdir dist || echo Dist already exists.",
     "bundle": "esbuild src/gmailJsLoader.js src/extension.js --outdir=dist/ --bundle --sourcemap --target=es6",
     "devbuild": "cp ../gmail.js/src/gmail.js node_modules/gmail-js/src/ && npm run build",
-    "build": "npm run stage && npm run bundle"
+    "build": "npm run stage && npm run bundle",
+    "dev": "npm run bundle -- --watch"
   },
   "author": "Jostein kjønigsen",
   "license": "ISC",
