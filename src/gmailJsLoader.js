@@ -13,13 +13,15 @@
 const GmailFactory = require("gmail-js");
 import $ from "jquery";
 
-const trustedHTMLpolicy = trustedTypes.createPolicy("default", {
-    createHTML: (to_escape) => to_escape,
-});
+if ("trustedTypes" in window) {
+    const trustedHTMLpolicy = trustedTypes.createPolicy("default", {
+        createHTML: (to_escape) => to_escape,
+    });
 
-$.extend({
-    htmlPrefilter: trustedHTMLpolicy.createHTML // this is the actual function which jQuery needs
-});
+    $.extend({
+        htmlPrefilter: trustedHTMLpolicy.createHTML // this is the actual function which jQuery needs
+    });
+}
 
 // don't mess up too bad if we have several gmail.js-based
 // extensions loaded at the same time!
