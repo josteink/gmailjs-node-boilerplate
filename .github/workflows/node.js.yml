@@ -28,3 +28,24 @@ jobs:
     - run: npm install
     - run: npm update
     - run: npm run build
+
+  # Auto-approve and enable auto-merge for Dependabot PRs (only if CI passes)
+  dependabot-auto-merge:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.user.login == 'renovate[bot]' || github.event.pull_request.user.login == 'dependabot[bot]'
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Approve Dependabot PR
+        run: gh pr review --approve "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Enable auto-merge
+        run: gh pr merge --auto --squash "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
